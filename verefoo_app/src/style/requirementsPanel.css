@@ -1,0 +1,254 @@
+.requirements-div {
+    padding: 24px 40px 40px 40px;
+    overflow: auto;
+    color: var(--text-main);
+    background-color: var(--bg-bars);
+    z-index: 2;
+    height: stretch;
+}
+
+.requirements-header {
+    font-family: var(--font-panel-node);
+    color: var(--text-main);
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+}
+
+.requirements-row{
+    font-family: var(--font-main);
+    padding: 12px 16px;
+    font-size: 14px;
+}
+
+.requirements-header, .requirements-row {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) 0.5fr;
+  align-items: center;
+  border-bottom: 1px solid var(--stroke);
+}
+
+.requirements-row:last-child {
+    border-bottom: none;
+}
+
+.requirements-row:hover {
+    background-color: var(--bg-hover);
+}
+
+.add-requirements-btn{
+    background-color: var(--secondary-blue);
+    position: relative;
+    right: 0;
+    color: var(--btn-text);
+    padding: 7px;
+    border-radius: 8px;
+    width: fit-content;
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.requirement-form{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 11px;
+}
+
+.new-requirement-p {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+}
+
+.add-requirements-div{
+    margin-top: 16px;
+    margin-bottom: 20px;
+    border: 1px solid var(--stroke);
+    font-family: var(--font-panel-node);
+    padding: 16px 20px 20px;
+    border-radius: 8px;
+}
+
+.requirements-table {
+    border-radius: 8px;
+    border: 1px solid var(--stroke);
+    margin-top: 10px;
+}
+
+.requirement-input-div {
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.requirement-input {
+    border: 1px solid transparent;
+    font-size: 12px;
+    padding-left: 10px;
+    border-radius: 8px;
+    height: 25px;
+    min-width: 100px;
+    width: 100%;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-error {
+    border: 1px solid #ff4d4f;
+    box-shadow: 0 0 0 1px rgba(255, 77, 79, 0.2);
+}
+
+.requirement-label{
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding-left: 1px;
+}
+
+.buttons-div{
+    display: flex;
+    margin-top: 10px;
+    justify-content: end;
+    gap: 10px;
+}
+
+.save-btn{
+    background-color: var(--secondary-blue);
+    color: var(--btn-text);
+    padding: 7px 0px;
+    border-radius: 8px;
+    width: 90px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-btn:focus {
+    border: 1px solid white;
+    padding: 2px;
+} 
+
+.close-btn{
+    border: solid 1px var(--secondary-blue);
+    color: var(--text-main);
+    padding: 7px 0px;
+    border-radius: 8px;
+    width: 90px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.action-div{
+    border-radius: 8px;
+    width: fit-content;
+    padding: 1px 7px;
+}
+
+.all-actions-div{
+    display: flex;
+    color: var(--text-secondary);
+    gap: 10px;
+}
+
+.all-actions-div svg {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 4px;
+    box-sizing: content-box;
+    transition: color 0.1s;
+}
+
+.all-actions-div svg:hover {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+.empty-name {
+    padding: 32px 16px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-family: var(--font-panel-node);    
+}
+
+.requirements-row-selected {
+    background-color: var(--bg-hover);
+}
+
+.add-requirements-btn-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.react-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--stroke);
+    font-family: var(--font-main);
+    font-size: 14px;
+    color: var(--text-secondary);
+    user-select: none;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.react-option:hover {
+    border-color: var(--secondary-blue);
+    color: var(--text-main);
+}
+
+.react-option p {
+    margin: 0;
+}
+
+.react-option input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    border: 1px solid var(--stroke);
+    background-color: var(--bg-main);
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.react-option input[type="checkbox"]:hover {
+    border-color: var(--secondary-blue);
+}
+
+.react-option input[type="checkbox"]:checked {
+    background-color: var(--secondary-blue);
+    border-color: var(--secondary-blue);
+}
+
+.react-option input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid var(--btn-text);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}

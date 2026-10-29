@@ -1,0 +1,19 @@
+.network-nodes {
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    padding-left: 35px;
+    gap: 20px;
+    cursor: grab;
+    color: var(--text-main);
+}
+
+.network-nodes-img{
+    width: 47px;
+    height: 47px;
+}
+
+.network-nodes-text {
+    font-family: var(--font-panel-node);
+    font-size: 14px;
+}

@@ -1,0 +1,34 @@
+.notification-div {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 8px;
+}
+
+.notification-inside-div {
+    background-color: var(--bg-main);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.notification-p {
+    padding: 10px 15px 5px 15px;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    font-family: var(--font-panel-node);
+    color: var(--text-main);
+}
+
+.time-div {
+    height: 3px;
+    background-color: var(--bg-bars-reverse);
+    transform-origin: left;
+    animation: shrink 5s linear forwards;
+}
+
+@keyframes shrink {
+    from { transform: scaleX(1); }
+    to   { transform: scaleX(0); }
+}

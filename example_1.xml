@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NFV xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/nfvSchema.xsd">
+    <graphs>
+        <graph nodes_saved="True" id="1" serviceGraph="false">
+            <node functional_type="FORWARDER" name="20.0.0.1" x="1251.9504809907614" y="194.36782951461169" width="75" height="75" resultingWidth="105" resultingHeight="94.19999694824219">
+                <neighbour name="10.0.1.4"/>
+                <neighbour name="10.0.1.5"/>
+                <neighbour name="10.0.1.6"/>
+                <neighbour name="10.0.1.7"/>
+                <configuration description="Forwarder" name="R1">
+                    <forwarder>
+                        <name>Forwarder</name>
+                    </forwarder>
+                </configuration>
+            </node>
+            <node functional_type="FORWARDER" name="20.0.0.2" x="1428.8655664680937" y="304.38739511322916" width="75" height="75" resultingWidth="105" resultingHeight="94.19999694824219">
+                <neighbour name="10.0.1.5"/>
+                <neighbour name="10.0.1.8"/>
+                <neighbour name="10.0.1.9"/>
+                <configuration description="Forwarder" name="R2">
+                    <forwarder>
+                        <name>Forwarder</name>
+                    </forwarder>
+                </configuration>
+            </node>
+            <node name="10.0.1.5" x="1364.3274358587894" y="169.0920255261223" width="75" height="75" resultingWidth="106.19999694824219" resultingHeight="94.5999984741211">
+                <neighbour name="20.0.0.1"/>
+                <neighbour name="20.0.0.2"/>
+                <configuration description="" name="AP2"/>
+            </node>
+            <node name="10.0.1.4" x="1134.1401021780728" y="306.05065038328866" width="75" height="75" resultingWidth="106.19999694824219" resultingHeight="94.5999984741211">
+                <neighbour name="20.0.0.1"/>
+                <neighbour name="10.0.1.11"/>
+                <configuration description="" name="AP6"/>
+            </node>
+            <node functional_type="LOADBALANCER" name="10.0.1.11" x="1025.5274143835081" y="310.27767012076396" width="75" height="75" resultingWidth="105" resultingHeight="94.19999694824219">
+                <neighbour name="10.0.1.4"/>
+                <neighbour name="10.0.1.1"/>
+                <neighbour name="10.0.1.2"/>
+                <neighbour name="10.0.1.3"/>
+                <configuration description="" name="LB">
+                    <loadbalancer>
+                        <pool>10.0.0.1</pool>
+                        <pool>10.0.0.2</pool>
+                        <pool>10.0.0.3</pool>
+                    </loadbalancer>
+                </configuration>
+            </node>
+            <node name="10.0.1.1" x="935.4758661342534" y="220.79260540150898" width="75" height="75" resultingWidth="106.19999694824219" resultingHeight="94.5999984741211">
+                <neighbour name="10.0.1.11"/>
+                <neighbour name="10.1.0.1"/>
+                <configuration description="" name="AP7"/>
+            </node>
+            <node name="10.0.1.2" x="924.9682253581203" y="323.4757015429019" width="75" height="75" resultingWidth="106.19999694824219" resultingHeight="94.5999984741211">
+                <neighbour name="10.0.1.11"/>
+                <neighbour name="10.1.0.2"/>
+                <configuration description="" name="AP8"/>
+            </node>
+            <node name="10.0.1.3" x="950.6988672456666" y="412.2522757414953" width="75" height="75" resultingWidth="106.19999694824219" resultingHeight="94.5999984741211">
+                <neighbour name="10.0.1.11"/>
+                <neighbour name="10.1.0.3"/>
+                <configuration description="" name="AP9"/>
+            </node>
+            <node name="10.0.1.6" x="1261.0219945481338" y="307.07988657730044" width="75" height="75" resultingWidth="106.19999694824219" resultingHeight="94.5999984741211">
+                <neighbour name="20.0.0.1"/>
+                <neighbour name="10.0.0.4"/>
+                <configuration description="" name="AP5"/>
+            </node>
+            <node name="10.0.1.7" x="1246.5235516744463" y="90.17904432585175" width="75" height="75" resultingWidth="106.19999694824219" resultingHeight="94.5999984741211">
+                <neighbour name="20.0.0.1"/>
+                <neighbour name="10.0.0.5"/>
+                <configuration description="" name="AP1"/>
+            </node>
+            <node name="10.0.1.8" x="1539.272178381693" y="243.1619103247787" width="75" height="75" resultingWidth="106.19999694824219" resultingHeight="94.5999984741211">
+                <neighbour name="20.0.0.2"/>
+                <neighbour name="10.0.0.6"/>
+                <configuration description="" name="AP3"/>
+            </node>
+            <node name="10.0.1.9" x="1552.3369567074174" y="381.6720234527487" width="75" height="75" resultingWidth="106.19999694824219" resultingHeight="94.5999984741211">
+                <neighbour name="20.0.0.2"/>
+                <neighbour name="10.0.0.7"/>
+                <configuration description="" name="AP4"/>
+            </node>
+            <node functional_type="WEBSERVER" name="10.0.0.6" x="1680.8101051159695" y="163.86988904137553" width="75" height="75" resultingWidth="105" resultingHeight="94.19999694824219">
+                <neighbour name="10.0.1.8"/>
+                <configuration description="" name="E6 - 10.0.0.6">
+                    <webserver>
+                        <name>10.0.0.6</name>
+                    </webserver>
+                </configuration>
+            </node>
+            <node functional_type="WEBSERVER" name="10.0.0.7" x="1708.8968821398591" y="418.80879291459576" width="75" height="75" resultingWidth="106.5999984741211" resultingHeight="95.80000305175781">
+                <neighbour name="10.0.1.9"/>
+                <configuration description="" name="E7 - 10.0.0.7">
+                    <webserver>
+                        <name>10.0.0.7</name>
+                    </webserver>
+                </configuration>
+            </node>
+            <node functional_type="WEBSERVER" name="10.0.0.5" x="1240.2938683162206" y="-33.35405309908332" width="75" height="75" resultingWidth="105" resultingHeight="94.19999694824219">
+                <neighbour name="10.0.1.7"/>
+                <configuration description="" name="E5 - 10.0.0.5">
+                    <webserver>
+                        <name>10.0.0.5</name>
+                    </webserver>
+                </configuration>
+            </node>
+            <node functional_type="WEBSERVER" name="10.0.0.4" x="1251.1606285512928" y="416.27341442317555" width="75" height="75" resultingWidth="105" resultingHeight="94.19999694824219">
+                <neighbour name="10.0.1.6"/>
+                <configuration description="" name="E4 - 10.0.0.4">
+                    <webserver>
+                        <name>10.0.0.4</name>
+                    </webserver>
+                </configuration>
+            </node>
+            <node functional_type="WEBSERVER" name="10.1.0.1" x="820.2027272186745" y="173.75943898709474" width="75" height="75" resultingWidth="105" resultingHeight="94.19999694824219">
+                <neighbour name="10.0.1.1"/>
+                <configuration description="" name="E1 - 10.1.0.1">
+                    <webserver>
+                        <name>10.1.0.1</name>
+                    </webserver>
+                </configuration>
+            </node>
+            <node functional_type="WEBSERVER" name="10.1.0.2" x="790.8339080641675" y="310.09580632924747" width="75" height="75" resultingWidth="105" resultingHeight="94.19999694824219">
+                <neighbour name="10.0.1.2"/>
+                <configuration description="" name="E2 - 10.1.0.2">
+                    <webserver>
+                        <name>10.1.0.2</name>
+                    </webserver>
+                </configuration>
+            </node>
+            <node functional_type="WEBSERVER" name="10.1.0.3" x="797.4401458630164" y="421.5392434433813" width="75" height="75" resultingWidth="105" resultingHeight="94.19999694824219">
+                <neighbour name="10.0.1.3"/>
+                <configuration description="" name="E3 - 10.1.0.3">
+                    <webserver>
+                        <name>10.1.0.3</name>
+                    </webserver>
+                </configuration>
+            </node>
+        </graph>
+    </graphs>
+    <Constraints>
+        <NodeConstraints/>
+        <LinkConstraints/>
+        <AllocationConstraints/>
+    </Constraints>
+    <PropertyDefinition requirements_saved="True">
+        <Property graph="1" name="IsolationProperty" src="10.1.0.-1" dst="10.0.0.5" src_port="0-65535" dst_port="80" lv4proto="TCP"/>
+        <Property graph="1" name="ReachabilityProperty" src="10.1.0.2" dst="10.0.0.5" src_port="735" dst_port="22" lv4proto="TCP"/>
+        <Property graph="1" name="ReachabilityProperty" src="10.1.0.1" dst="10.0.0.5" src_port="735" dst_port="22" lv4proto="TCP"/>
+        <Property graph="1" name="IsolationProperty" src="10.0.0.6" dst="10.0.0.4" src_port="0-65535" dst_port="0-65535" lv4proto="ANY"/>
+        <Property graph="1" name="IsolationProperty" src="10.0.0.6" dst="10.0.0.5" src_port="0-65535" dst_port="0-65535" lv4proto="ANY"/>
+    </PropertyDefinition>
+</NFV>

@@ -1,0 +1,88 @@
+.left-panel-div {
+    position: absolute;
+    height: 93%;
+    width: 21%;
+    background-color: var(--bg-bars);
+    border-right: 1px solid var(--stroke);
+    /* overflow-y: auto; */
+    overflow-x: visible;
+    z-index: 1;
+    color: var(--text-main);
+}
+
+.left-displace-button {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    background-color: var(--bg-bars);
+    padding: 15px 10px 15px 7px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.left-panel-div:not(.resizing) {
+	  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.left-panel-text {
+    font-family: var(--font-main);
+    font-size: 15px;
+    color: var(--text-main);
+    padding-left: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+
+.left-panel-resize-handle {
+    width: 4px;
+    cursor: col-resize;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+.left-panel-header {
+    display: flex;
+    border-bottom: 1px solid var(--stroke);
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.left-panel-div.collapsed {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.left-panel-collapsed-text {
+	  font-family: var(--font-main);
+    font-size: 15px;
+    color: var(--text-main);
+    font-weight: 500;
+    letter-spacing: 10px;
+	  padding-left: 4px;
+    
+	  opacity: 0;
+    animation: fadeIn 0.18s ease forwards;
+    animation-delay: 0.18s;
+}
+
+.left-panel-collapsed-icon {
+	  opacity: 0;
+	  animation: fadeIn 0.18s ease forwards;
+    animation-delay: 0.18s;
+}
+
+.no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

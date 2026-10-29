@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NFV xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../xsd/nfvSchema.xsd">
+    <graphs>
+    </graphs>
+    <Constraints>
+        <NodeConstraints>
+        </NodeConstraints>
+
+        <LinkConstraints>
+        </LinkConstraints>
+
+        <AllocationConstraints>
+        </AllocationConstraints>
+    </Constraints>
+
+    <PropertyDefinition>
+    <PropertyDefinition>
+</NFV>

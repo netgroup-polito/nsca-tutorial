@@ -1,0 +1,245 @@
+.right-panel-div {
+    position: absolute;
+    height: 92%;
+    width: 21%;
+    right: 0;
+    z-index: 1;
+    /* overflow-y: auto; */
+    font-family: var(--font-main);
+    color: var(--text-main);
+    background-color: var(--bg-bars);
+    border-left: 1px solid var(--stroke);
+}
+
+.right-displace-button {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    background-color: var(--bg-bars);
+    padding: 15px 10px 15px 7px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.right-panel-div:not(.resizing) {
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.right-panel-div.collapsed {
+    padding: 10px 0 0 10px;
+}
+
+.right-panel-resize-handle {
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: col-resize;
+}
+
+.right-panel-collapsed-icon {
+    opacity: 0;
+    animation: fadeIn 0.18s ease 0.18s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.no-select {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.right-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-left: 20px;
+    border-bottom: 1px solid var(--stroke);
+}
+
+.right-panel-text {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 20px 35px 20px 0;
+}
+
+.right-panel-config-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.right-panel-chevron {
+    transition: transform 0.2s ease;
+}
+
+.right-panel-config-content {
+    overflow: hidden;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--stroke);
+    transition:
+        opacity 0.1s ease,
+        transform 0.15s ease,
+        padding-bottom 0.25s ease;
+}
+
+.right-panel-config-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-30px);
+    padding-bottom: 0;
+}
+
+.right-panel-config {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px 0 0 20px;
+}
+
+.right-panel-config-text {
+    font-size: 12px;
+}
+
+.right-panel-input {
+    font-size: 12px;
+    height: 25px;
+    margin-top: 7px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    resize: none;
+}
+
+.right-panel-dimensions-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.right-panel-dimensions {
+    display: flex;
+    gap: 21px;
+    margin-top: 7px;
+}
+
+.right-panel-dimension-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 92px;
+    padding-left: 8px;
+}
+
+.right-panel-dimension-input input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    background: transparent;
+    color: var(--text-main);
+}
+
+.right-panel-lock-label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 1px
+}
+
+.right-panel-badge {
+    border-radius: 8px;
+    border: 1px solid var(--stroke);
+    padding: 2px 4px;
+    font-size: 12px;
+    margin-top: 7px;
+    color: var(--btn-text);
+    font-weight: 500;
+}
+
+.right-panel-firewall-download {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 7px;
+    padding-right: 35px;
+}
+
+.firewall-options-div {
+   padding: 5px 10px;
+   width: 35%; 
+   border-radius: 8px;
+   background-color: var(--stroke);
+   color: var(--bg-bars);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   box-shadow: 0px 4px 4px var(--bg-main);
+}
+
+.firewall-options-p {
+    font-family: var(--font-main);
+    font-size: 12px;    
+}
+
+.right-panel-firewall-div {
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+}
+
+.configurations-small-table {
+    width: 93%;
+    margin-top: 7px;
+}
+
+.configurations-small-header {
+    font-weight: 500;
+}
+
+.configurations-small-header,
+.configurations-small-row {
+    display: flex;
+    font-size: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+}
+
+
+.expand {
+    font-size: 12px;
+    text-decoration: underline;
+    color: var(--btn-blue);
+    cursor: pointer;
+}
+
+.default-config-small-p {
+    font-size: 11px;
+}
+
+.default-small-div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    align-items: flex-end;
+    margin-top: 5px;
+}
+
+.action-small-div {
+    border-radius: 8px;
+    padding: 1px 3px;
+}
+
+.action-small-p {
+    font-size: 11px;
+}

@@ -1,0 +1,81 @@
+.covered-address-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 7px;
+    width: 100%;
+    max-width: 240px;
+}
+
+.covered-address-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    min-height: 30px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    background-color: var(--bg-main);
+}
+
+.covered-address-empty {
+    font-size: 11px;
+    color: var(--text-main);
+    opacity: 0.5;
+    padding: 2px 2px;
+}
+
+.covered-address-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 6px 4px 10px;
+    border-radius: 999px;
+    background-color: var(--disabled-button);
+    color: var(--text-main);
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.covered-address-remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--text-main);
+    opacity: 0.6;
+    transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+.covered-address-remove:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    opacity: 1;
+}
+
+.covered-select {
+    border: 1px solid transparent;
+    font-size: 12px;
+    padding: 0 10px;
+    border-radius: 8px;
+    height: 25px;
+    min-width: 100px;
+    width: 100%;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: border-color 0.15s ease;
+}
+
+.covered-select:hover {
+    border-color: var(--stroke);
+}
+
+.covered-select:focus {
+    outline: none;
+    border-color: var(--stroke);
+}

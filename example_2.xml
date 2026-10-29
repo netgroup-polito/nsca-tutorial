@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NFV xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/nfvSchema.xsd">
+    <graphs>
+        <graph nodes_saved="True" id="1" serviceGraph="false">
+            <node functional_type="WEBSERVER" name="10.0.0.2" x="1107.5" y="671.8666659593582" width="75" height="75" resultingWidth="105" resultingHeight="94">
+                <neighbour name="33.33.0.2"/>
+                <configuration description="Endpoint" name="10.0.0.2">
+                    <webserver>
+                        <name>10.0.0.2</name>
+                    </webserver>
+                </configuration>
+            </node>
+            <node functional_type="WEBSERVER" name="10.0.0.1" x="1368.5" y="166.86666595935822" width="75" height="75" resultingWidth="105" resultingHeight="94">
+                <neighbour name="33.33.0.1"/>
+                <configuration description="Endpoint" name="10.0.0.1">
+                    <webserver>
+                        <name>10.0.0.1</name>
+                    </webserver>
+                </configuration>
+            </node>
+            <node functional_type="FORWARDER" name="22.22.0.2" x="1073.5" y="198.86666595935822" width="75" height="75" resultingWidth="105" resultingHeight="94">
+                <neighbour name="22.22.0.5"/>
+                <neighbour name="33.33.0.4"/>
+                <neighbour name="33.33.0.1"/>
+                <configuration description="Forwarder" name="R2">
+                    <forwarder>
+                        <name>Forwarder</name>
+                    </forwarder>
+                </configuration>
+            </node>
+            <node functional_type="WEBSERVER" name="20.0.0.2" x="673.5" y="380.8666659593582" width="75" height="75" resultingWidth="105" resultingHeight="94">
+                <neighbour name="22.22.0.7"/>
+                <configuration description="Endpoint
+" name="20.0.0.2">
+                    <webserver>
+                        <name>20.0.0.2</name>
+                    </webserver>
+                </configuration>
+            </node>
+            <node functional_type="FORWARDER" name="22.22.0.1" x="1263.5" y="410.3000030517578" width="75" height="75" resultingWidth="105" resultingHeight="94">
+                <neighbour name="33.33.0.4"/>
+                <neighbour name="33.33.0.3"/>
+                <neighbour name="33.33.0.2"/>
+                <configuration description="Forwarder" name="R1">
+                    <forwarder>
+                        <name>Forwarder</name>
+                    </forwarder>
+                </configuration>
+            </node>
+            <node functional_type="NAT" name="10.10.0.10" x="894.5" y="293.8666659593582" width="75" height="75" resultingWidth="105" resultingHeight="84">
+                <neighbour name="22.22.0.6"/>
+                <neighbour name="22.22.0.7"/>
+                <neighbour name="22.22.0.5"/>
+                <configuration description="Network Address Translator" name="NAT1-10.10.0.10">
+                    <nat>
+                        <source>20.0.0.2</source>
+                        <source>20.0.0.1</source>
+                    </nat>
+                </configuration>
+            </node>
+            <node functional_type="WEBSERVER" name="20.0.0.1" x="636.5" y="126.86666595935822" width="75" height="75" resultingWidth="105" resultingHeight="94">
+                <neighbour name="22.22.0.6"/>
+                <configuration description="Endpoint" name="20.0.0.1">
+                    <webserver>
+                        <name>20.0.0.1</name>
+                    </webserver>
+                </configuration>
+            </node>
+            <node name="22.22.0.6" x="760.5" y="188.86666595935822" width="75" height="75" resultingWidth="105" resultingHeight="94">
+                <neighbour name="20.0.0.1"/>
+                <neighbour name="10.10.0.10"/>
+                <configuration description="Allocation Place" name="AP6"/>
+            </node>
+            <node name="22.22.0.7" x="768.5" y="326.8666659593582" width="75" height="75" resultingWidth="105" resultingHeight="94">
+                <neighbour name="20.0.0.2"/>
+                <neighbour name="10.10.0.10"/>
+                <configuration description="Allocation Place" name="AP7"/>
+            </node>
+            <node name="22.22.0.5" x="992.5" y="256.8666659593582" width="75" height="75" resultingWidth="105" resultingHeight="94">
+                <neighbour name="22.22.0.2"/>
+                <neighbour name="10.10.0.10"/>
+                <configuration description="Allocation Place" name="AP5"/>
+            </node>
+            <node name="33.33.0.4" x="1149.5" y="336.8666659593582" width="75" height="75" resultingWidth="105" resultingHeight="94">
+                <neighbour name="22.22.0.2"/>
+                <neighbour name="22.22.0.1"/>
+                <configuration description="Allocation Place" name="AP4"/>
+            </node>
+            <node name="33.33.0.1" x="1219.5" y="171.86666595935822" width="75" height="75" resultingWidth="105" resultingHeight="94">
+                <neighbour name="22.22.0.2"/>
+                <neighbour name="10.0.0.1"/>
+                <configuration description="Allocation Place" name="AP1"/>
+            </node>
+            <node name="33.33.0.3" x="1412.5" y="463.8666659593582" width="75" height="75" resultingWidth="105" resultingHeight="94">
+                <neighbour name="22.22.0.1"/>
+                <neighbour name="10.0.0.3"/>
+                <configuration description="Allocation Place" name="AP3"/>
+            </node>
+            <node functional_type="WEBSERVER" name="10.0.0.3" x="1547.5" y="513.8666659593582" width="75" height="75" resultingWidth="105" resultingHeight="94">
+                <neighbour name="33.33.0.3"/>
+                <configuration description="Endpoint
+" name="10.0.03">
+                    <webserver>
+                        <name>10.0.0.3</name>
+                    </webserver>
+                </configuration>
+            </node>
+            <node name="33.33.0.2" x="1214.5" y="545.8666659593582" width="75" height="75" resultingWidth="105" resultingHeight="94">
+                <neighbour name="22.22.0.1"/>
+                <neighbour name="10.0.0.2"/>
+                <configuration description="Allocation Place" name="AP2"/>
+            </node>
+        </graph>
+    </graphs>
+    <Constraints>
+        <NodeConstraints/>
+        <LinkConstraints/>
+        <AllocationConstraints/>
+    </Constraints>
+    <PropertyDefinition requirements_saved="True">
+        <Property graph="1" name="IsolationProperty" src="20.0.0.-1" dst="10.0.0.3" src_port="0-65535" dst_port="0-65535" lv4proto="TCP"/>
+        <Property graph="1" name="ReachabilityProperty" src="20.0.0.1" dst="10.0.0.2" src_port="0-65535" dst_port="0-65535" lv4proto="UDP"/>
+    </PropertyDefinition>
+</NFV>

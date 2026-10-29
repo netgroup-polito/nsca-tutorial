@@ -1,0 +1,93 @@
+.canvas-div {
+    background-color: var(--bg-main);
+    background-image: radial-gradient(circle, var(--bg-dots), 1px, transparent 1px);
+    background-size: 18px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--font-main);
+    position: relative;
+    width: 100%;
+}
+
+.move {
+    height: 60px;
+    width: 60px;
+    color: var(--secondary-stroke);
+}
+
+.information-text {
+    color: var(--stroke);
+    font-size: 15px;
+    margin: 20px 0 20px 0;
+}
+
+.information-smaller {
+    color: var(--stroke);
+    font-size: 14px;
+}
+
+.canvas-hud {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+    color: #555555;
+    backdrop-filter: blur(4px);
+    user-select: none;
+    opacity: 0.6;
+}
+
+.canvas-hud:hover {
+    opacity: 1;
+}
+
+.canvas-hud button {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px 8px;
+    cursor: pointer;
+    font-size: 11px;
+    color: #444;
+}
+
+.canvas-hud button:hover {
+    background: #f0f0f0;
+}
+
+.canvas-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0px 0px;
+    overflow: visible;
+}
+
+.canvas-empty {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    gap: 8px;
+}
+
+.canvas-selection-rect {
+    border: 1px solid var(--secondary-blue);
+    background-color: rgba(12, 140, 233, 0.08);
+    border-radius: 2px;
+}

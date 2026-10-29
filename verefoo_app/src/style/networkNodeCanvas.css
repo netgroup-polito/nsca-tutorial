@@ -1,0 +1,93 @@
+    .network-node-canvas {
+        display: flex;
+        flex-direction: column;
+        padding: 7px 15px 7px 15px;
+        gap: 5px;
+        cursor: pointer;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        overflow: hidden;
+        color: var(--text-main);
+    }
+
+    .selected {
+        border: 1px solid var(--stroke);
+        background-color: var(--bg-bars-transparent);
+        border-radius: 8px;
+        box-shadow: 0 0 10px 1px var(--secondary-blue);
+        resize: both;
+    }
+
+    .multi-selected {
+        border: 1px dashed var(--secondary-blue);
+        background-color: var(--btn-green-transparent);
+        border-radius: 8px;
+        box-shadow: 0 0 8px 1px var(--btn-green);
+    }
+
+    .node-name-canvas {
+        font-family: var(--font-canvas-node);
+        font-size: 12px;
+    }
+
+    .error-dot {
+        border-radius: 50%;
+        height: 8px;
+        width: 8px;
+        background-color: var(--btn-red);
+        position: absolute;
+        top: 2px;
+        right: 3px;
+
+        animation: pulse-dot 1.5s infinite;
+        box-shadow: 0 0 0 0 var(--btn-red);
+    }
+
+    @keyframes pulse-dot {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+        }
+
+        70% {
+            transform: scale(1.1);
+            box-shadow: 0 0 0 8px rgba(255, 0, 0, 0);
+        }
+
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+        }
+    }
+
+    .update-dot {
+        border-radius: 50%;
+        height: 8px;
+        width: 8px;
+        background-color: var(--btn-green);
+        position: absolute;
+        top: 6px;
+        right: 6px;
+
+        animation: update-pulse-dot 1.5s infinite;
+        box-shadow: 0 0 0 0 var(--btn-green);
+    }
+
+    @keyframes update-pulse-dot {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
+        }
+
+        70% {
+            transform: scale(1.1);
+            box-shadow: 0 0 0 8px rgba(255, 0, 0, 0);
+        }
+
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+        }
+    }
+
